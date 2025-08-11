@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Miltersen Insights</title>
+<meta http-equiv="refresh" content="0; url=/en/index.html">
+<script>
+  (function() {
+    try {
+      var lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+      var target = lang.startsWith('da') ? '/da/index.html' : '/en/index.html';
+      window.location.replace(target);
+    } catch(e) {
+      // fallback meta refresh
+    }
+  })();
+</script>
+<noscript>
+  <meta http-equiv="refresh" content="0; url=/en/index.html">
+</noscript>
+</head>
+<body>
+  <p>If you are not redirected, choose: <a href="/en/index.html">English</a> or <a href="/da/index.html">Dansk</a>.</p>
+</body>
+</html>
