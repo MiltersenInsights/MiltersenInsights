@@ -47,11 +47,11 @@ h1 { color: white; margin: 0 0 8px; font-size: clamp(32px, 6vw, 54px); }
 
 .hero-copy { color: #fff; } /* assuming white text over your overlay */
 .hero-photo {
+  background: none; /* remove any background */
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-height: 50%; 
+  align-items: flex-end; /* push image to the bottom */
+  justify-content: center; /* center horizontally */
+  padding-bottom: 20px; /* optional spacing from bottom */
 }
 .headshot {
   width: 280px; /* adjust until you like it */
