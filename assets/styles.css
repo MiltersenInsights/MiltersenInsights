@@ -44,7 +44,13 @@ h1 { color: white; margin: 0 0 8px; font-size: clamp(32px, 6vw, 54px); }
   align-items: center;
   gap: 28px;
 }
-
+.hero {
+  position: relative;
+  background: url('../assets/hero.jpg') center/cover no-repeat;
+}
+.hero img.hero-bg {
+  display: none; /* if you keep the <img>, hide it since background handles it */
+}
 .hero-copy { color: #fff; } /* assuming white text over your overlay */
 .hero-photo {
   background: none; /* remove any background */
