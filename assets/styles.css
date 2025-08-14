@@ -33,6 +33,49 @@ h1 { color: white; margin: 0 0 8px; font-size: clamp(32px, 6vw, 54px); }
 .pills { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; }
 .pills span { background: rgba(255,255,255,.18); color: white; border: 1px solid rgba(255,255,255,.28); padding: 6px 10px; border-radius: 999px; font-size: 14px; }
 
+/* Split hero layout */
+
+.hero .content { padding-inline: 0; } /* keep your existing spacing rules */
+.hero .hero-grid {
+  width: min(1120px, 90vw);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 28px;
+}
+
+.hero-copy { color: #fff; } /* assuming white text over your overlay */
+.hero-photo { display: grid; place-items: center; }
+
+.headshot {
+  width: 320px;
+  max-width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.25);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.28);
+  backdrop-filter: saturate(120%);
+}
+.headshot-caption {
+  margin-top: 10px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.9);
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .hero .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .hero-photo { order: -1; } /* photo above text on mobile */
+  .headshot { width: 220px; }
+}
+
+/* END Split hero layout END */
+
 .section { padding: 36px 0; }
 .grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
 .grid-2 { display: grid; grid-template-columns: repeat(2,1fr); gap: 22px; }
