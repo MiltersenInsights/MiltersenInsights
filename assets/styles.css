@@ -46,17 +46,21 @@ h1 { color: white; margin: 0 0 8px; font-size: clamp(32px, 6vw, 54px); }
 }
 
 .hero-copy { color: #fff; } /* assuming white text over your overlay */
-.hero-photo { display: grid; place-items: center; }
-
+.hero-photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-height: 80%; 
+}
 .headshot {
-  width: 320px;
+  width: 280px; /* adjust until you like it */
   max-width: 100%;
-  aspect-ratio: 4 / 5;
+  height: auto; /* ensures it keeps portrait ratio */
   object-fit: cover;
   border-radius: 18px;
   border: 1px solid rgba(255,255,255,0.25);
   box-shadow: 0 10px 30px rgba(0,0,0,0.28);
-  backdrop-filter: saturate(120%);
 }
 .headshot-caption {
   margin-top: 10px;
